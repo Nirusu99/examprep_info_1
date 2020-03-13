@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{xcolor}
+\usepackage{tikz}
 
 \begin{document}
 \paragraph{\Large GBI Definitionen}
@@ -70,6 +71,36 @@
         \begin{itemize}
             \item zwischen jeden beliebigen zwei Knoten (Knotenpaar) aus dem Graphen ein Pfad existiert. Also jeder Punkt von jedem anderen Punkt (sich eingeschlossen) erreichbar ist. 
         \end{itemize}
+        \item Ein Graph ist ein \textcolor{red}{gerichteter Baum} wenn:
+        \begin{itemize}
+            \item es eine \textcolor{red}{Wurzel $r \in V$} gibt, ffür die gilt:
+            \begin{itemize}
+                \item zu jedem Knoten existiert \textbf{genau} ein Pfad
+                \item Wurzel ist immer \textbf{eindeutig}
+            \end{itemize}
+        \end{itemize}
+        \item Der \textcolor{red}{Eingangsgrad} eines Knoten ist die Anzahl aller Kanten die zu dem Knoten hinführen
+        \item Der \textcolor{red}{Ausgangsgrad} eines Knoten ist die Anzahl aller Kanten die von den Knoten wegführen
+        \item Der \textcolor{red}{Grad} eines Knoten ist die Anzahl der Kanten des Knotens (Also Ausgangsgrad + Eingangsgrad)
+        \item Knoten eines Baumes werden \textcolor{red}{Blätter} genannt, wenn Sie das Ende des Baumes sind, also Ausgangsgrad = 0
+        \item \textcolor{red}{innere Knoten} sind dann alle mit Ausgangsgrad > 0
+        \item $E^n$ ist ein Pfad der länge $n$. Bsp.: $E^2$ ist ein Pfad der Länge 2
+        \item $(x,y) \in E^2 \Leftrightarrow$ es existiert ein Pfad der Länge 2 von $x$ nach $y$
+        \item Ein ungerichteter Graph hat einfach nur Kanten und keine "Richtungs" Pfeile
+        \item Knotengrad für ungerichtete Graphen: man zählt alle "Kantenenden"
     \end{itemize}
+    \vspace{1cm}
+    Beispiel: \linebreak
+    \linebreak
+    \begin{tikzpicture}[-,auto,node distance=2cm,main node/.style={circle,draw,font=\Large}]
+        \tikzset{every loop/.style={}}
+        \node[main node] (1) {A};
+        \node[main node] (2) [right of=1] {B};
+
+        \path
+            (1) edge (2)
+            (2) edge[loop right] (2);
+    \end{tikzpicture} \linebreak \linebreak
+    $d(B) = 3$
 \end{flushleft}
 \end{document}
