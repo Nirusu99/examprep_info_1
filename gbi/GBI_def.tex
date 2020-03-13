@@ -3,14 +3,16 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{xcolor}
 
 \begin{document}
-\paragraph{GBI Definitionen}
-\subparagraph{RegEx}
+\paragraph{\Large GBI Definitionen}
+\large\subparagraph{\large RegEx}
+\normalsize
 \begin{flushleft}
     Wissenswertes:
     \begin{itemize}
-        \item Hilfssymbole $:= \{|,(,),\ast,\emptyset\}$
+        \item Hilfssymbole $:=$\textcolor{red}{$\{|,(,),\ast,\emptyset\}$}
         \item "$\ast$ vor $\cdot$ (Konkatenation)"
         \item "$\cdot$ vor Strich "|" (Oder)
         \item $\langle R \rangle$ ist die formale Sprache ist, welche mit $R$ gebildet werden kann
@@ -18,7 +20,7 @@
         \item $\langle R_1| R_2 \rangle = \langle R_1 \rangle \cup \langle R_2 \rangle$
         \item $\langle R_1 \cdot R_2 \rangle =\langle R_1 \rangle \cdot \langle R_2 \rangle$
         \item $\langle R \ast \rangle = \langle R \rangle ^\ast$
-        \item Es gibt kein $R+$ sondern $RR\ast$ Bsp.: Statt $(ab)+ \text{ einfach } ab(ab)\ast$
+        \item Es gibt \textbf{kein} $R+$ sondern $RR\ast$ Bsp.: Statt $(ab)+ \text{ einfach } ab(ab)\ast$
     \end{itemize}
     Bsp.: \\
     $R = a|b$ dann ist:
@@ -35,5 +37,39 @@
         &= (\langle a\ast\rangle\langle b\ast\rangle)^\ast = (\langle a\rangle^\ast\langle b\rangle^\ast)^\ast = (\{a\}^\ast\{b\}^\ast)^\ast \\
         &= \{a,b\}^\ast
     \end{align*}
+\end{flushleft}
+\large\subparagraph{\large Graphen}
+\normalsize
+\begin{flushleft}
+    \vspace{0.5cm}
+    \begin{itemize}
+        \item Ein gerichteter Graph ist das Paar \textcolor{red}{$G = (V,E)$}
+        \begin{itemize}
+            \item \textcolor{red}{Knotenmenge $V$} ist endlich und nichtleer (V für engl. vertex)
+            \item \textcolor{red}{Kantenmenge $E$} $\subseteq V \times V$  (E für engl. edge)
+            \begin{itemize}
+                \item muss damit auch endlich sein, darf aber leer sein
+            \end{itemize}
+        \end{itemize}
+        \item \textcolor{red}{Pfade} können über mehrer Kanten führen
+        \item \textcolor{red}{$V^{(+)}:$} Menge der nichtleeren Listen von Elementen aus V
+        \item Ein Pfad ist \textcolor{red}{$p=(v_0,\dots ,v_n) \in V^{(+)}$} wenn für jedes $i \in \mathbb{Z}_n$ gilt: \textcolor{red}{$(v_i,v_{i+1})\in E$}
+        \item Die Länge eines Pfades ist die Anzahl der Kanten
+        \item $v_n$ von $v_0$ ist erreichbar, wenn ein Pfad $p = (v_0,\dots ,v_n)$ existiert
+        \item Wenn der start und endpunkt identisch sind heißt der Pfad \textcolor{red}{geschlossen}
+        \item Wenn der geschlossene Pfad größer gleich 1 ist, heißt er \textcolor{red}{Zyklus}
+        \item Pfad heißt \textcolor{red}{wiederholungsfrei}, wenn
+        \begin{itemize}
+            \item Der erste bis zum vorletzte Konten verschieden sind ($v_0,\dots ,v_{n-1}$)
+            \item Der zweite bis zum letzten Knoten verschieden sind ($v_1,\dots ,v_n$)
+            \item Der erste und letzte Knoten drüfen gleich sein ($v_0$ und $v_n$)
+            \item Einfach: Außer der letzte und erste darf jeder Knoten nur einmal "betreten" werden
+        \end{itemize}
+        \item \textcolor{red}{azyklischer Graph}: kein Teilgraph ist zyklisch
+        \item Ein Graph ist \textcolor{red}{streng zusammenhängend} wenn
+        \begin{itemize}
+            \item zwischen jeden beliebigen zwei Knoten (Knotenpaar) aus dem Graphen ein Pfad existiert. Also jeder Punkt von jedem anderen Punkt (sich eingeschlossen) erreichbar ist. 
+        \end{itemize}
+    \end{itemize}
 \end{flushleft}
 \end{document}
