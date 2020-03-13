@@ -1,0 +1,38 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+\paragraph{GBI Definitionen}
+\subparagraph{RegEx}
+\begin{flushleft}
+    Wissenswertes:
+    \begin{itemize}
+        \item Hilfssymbole $:= \{|,(,),\ast,\emptyset\}$
+        \item "$\ast$ vor $\cdot$ (Konkatenation)"
+        \item "$\cdot$ vor Strich "|" (Oder)
+        \item $\langle R \rangle$ ist die formale Sprache ist, welche mit $R$ gebildet werden kann
+        \item $\langle \emptyset \rangle = \{\}$
+        \item $\langle R_1| R_2 \rangle = \langle R_1 \rangle \cup \langle R_2 \rangle$
+        \item $\langle R_1 \cdot R_2 \rangle =\langle R_1 \rangle \cdot \langle R_2 \rangle$
+        \item $\langle R \ast \rangle = \langle R \rangle ^\ast$
+    \end{itemize}
+    Bsp.: \\
+    $R = a|b$ dann ist:
+    \begin{align*}
+        \langle R \rangle = \langle a | b \rangle = \langle a \rangle \cup \langle b \rangle = \{a\} \cup \{b\} = \{a,b\}
+    \end{align*}
+    $R = (a|b)\ast$ dann ist:
+    \begin{align*}
+        \langle R \rangle = \langle (a|b)\ast \rangle = \langle a | b \rangle^\ast = \{a,b\}^\ast
+    \end{align*}
+    $R = (a\ast b\ast)\ast$ dann ist:
+    \begin{align*}
+        \langle R \rangle &= \langle (a\ast b\ast)\ast \rangle = \langle a\ast b\ast\rangle^\ast \\
+        &= (\langle a\ast\rangle\langle b\ast\rangle)^\ast = (\langle a\rangle^\ast\langle b\rangle^\ast)^\ast = (\{a\}^\ast\{b\}^\ast)^\ast \\
+        &= \{a,b\}^\ast
+    \end{align*}
+\end{flushleft}
+\end{document}
