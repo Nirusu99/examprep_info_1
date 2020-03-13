@@ -1,4 +1,4 @@
-#ignore all with
+#ignore all compile files for laTex
 *.aux
 *.fdb_latexmk
 *.fls
