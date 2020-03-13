@@ -102,4 +102,34 @@
     \end{tikzpicture} \linebreak \linebreak
     $d(B) = 3$
 \end{flushleft}
+\subparagraph{\large Kontextfreie Grammatik}
+\normalsize
+\begin{flushleft}
+    \begin{itemize}
+        \item \textcolor{red}{$N$} sind alle \textcolor{red}{Nichtterminalsymbole}
+        \item \textcolor{red}{$T$} sind alle \textcolor{red}{Terminalsymbole}
+        \item $N \cap T = \emptyset$
+        \item \textcolor{red}{$S$} ist der \textcolor{red}{Start} und $S \in N$
+        \item \textcolor{red}{$P$ Produktionen}, endliche Menge und $P \in N \times V^\ast$
+        \begin{itemize}
+            \item $V = N \cup T$ die Menge aller Symbole
+            \item Für jeder $(X,w) \in P $ schreibt man $X \rightarrow w$
+            \item Man "ersetz" $P$ durch $w$
+        \end{itemize}
+        Bei einem \textcolor{red}{Ableitungsschritt} wird ein Terminalsymbol durch abgeleitet. Dieser wird dann mit "$\Rightarrow$" dargestellt, nicht mit Implikations verwechseln!
+        \linebreak \linebreak Bsp.: \linebreak
+        $G = (\{X\},\{$\textcolor{blue}{a},\textcolor{blue}{b}$\},X,P)$ mit $ P = \{X \rightarrow \epsilon,X \rightarrow $\textcolor{blue}{a}$X$\textcolor{blue}{b}$\}$ \linebreak
+        \linebreak
+        Dann gilt zB.: \textcolor{blue}{aba}$X$\textcolor{blue}{ba}$XXXX \Rightarrow$  \textcolor{blue}{aba}$X$\textcolor{blue}{baa}$X$b$XXX$ als Ableitungsschritt.
+        (Man ersetzt das $X$ nach \textcolor{blue}{ba} mit \textcolor{blue}{a}$X$\textcolor{blue}{b}) \linebreak
+        \linebreak
+        Man kann auch einfach mit einem Index angeben, wie viele Ableitungsschritt getätigt werden. \linebreak
+        $\Rightarrow^2$ aber auch $u \Rightarrow^\ast v$ wenn $v$ aus $u$ ableitbar ist. $\Rightarrow^0$ ist einfach wieder das selbe.
+        \begin{itemize}
+            \item Eine \textcolor{red}{Grammatik} erzeugt eine \textcolor{red}{formale Sprache}, also einfach alle Wörter die man aus einer Grammtik ableiten kann.
+            \item $G = (N,T,S,P)$ erzeugt die formale Sprache $L(G) = \{w \in T^* | S \Rightarrow^\ast w\}$
+            \item Diese formalen Sprachen heißen \textcolor{red}{kontextfrei}
+        \end{itemize}
+    \end{itemize}
+\end{flushleft}
 \end{document}
