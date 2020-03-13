@@ -96,7 +96,6 @@
         \tikzset{every loop/.style={}}
         \node[main node] (1) {A};
         \node[main node] (2) [right of=1] {B};
-
         \path
             (1) edge (2)
             (2) edge[loop right] (2);
