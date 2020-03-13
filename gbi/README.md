@@ -1,3 +1,3 @@
 # GBI (Grundbegriffe der Informatik)
 
-Hier findest du alles wichtige zu GBI (2020)
+Hier findest du alles Wichtige zu GBI (2020)
