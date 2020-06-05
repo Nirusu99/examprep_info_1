@@ -8,6 +8,27 @@
 
 \begin{document}
 \paragraph{\Large GBI Definitionen}
+\large\subparagraph{\large Formale Sprachen}
+\normalsize
+\begin{flushleft}
+    Eine formale Sprache $L$ ist eine Menge aus Wörtern. \\
+    zB.: $L_{ab} = \{a,b\}$ ist die Sprache mit den Wörtern a und b
+    \begin{itemize}
+        \item Die Potenz eine Sprache ist definiert als: \\
+        \begin{align*}
+            L^0 &= \{\epsilon\} \\
+            L^{n + 1} &= L \cdot L^n
+        \end{align*}
+        \item Sprache konkateniert mit eine Sprache ist einfach jede mögliche Kombination der Wörter. Als Beispiel nehmen wir wieder $L_{ab} = \{a,b\}$
+        \begin{align*}
+            L_{ab} \cdot \{aa,bb\} &= \{aaa,bbb,baa,abb\} \\ \\
+            L_{ab}^3 &= L_{ab} \cdot L_{ab} \cdot L_{ab} \\
+            &= \{a,b\} \cdot \{a,b\} \cdot \{a,b\} \\
+            &= \{aa,bb,ab,ba\} \cdot \{a,b\} \\
+            &= \{aaa,aab,bba,bbb,aba,abb,baa,bab\}
+        \end{align*}
+    \end{itemize}
+\end{flushleft}
 \large\subparagraph{\large RegEx}
 \normalsize
 \begin{flushleft}
@@ -132,7 +153,7 @@
         \end{itemize}
     \end{itemize}
 \end{flushleft}
-\large\subparagraph{\large Turing-Mschinen}
+\large\subparagraph{\large Turing-Maschinen}
 \normalsize
 \begin{flushleft}
     Eine Turingmaschine ist im Grunde einfach nur ein spezieller Automat. Die Besonderheit der Turingmaschinen ist das "Speicherband", der
@@ -152,8 +173,7 @@
     \includegraphics[width=0.8\textwidth]{simple_turing.png} \\
     Hier sieht man eine simple Turingmaschine mit einem einzigen Zustand $Z$. Die Zellen unter dem Zustand sind das Speicherband mit der Eingabe. Der Pfeil symbolisiert den Schreib-Lese-Kopf.
     Aktuell befindet sich die Turingmaschine im Zustand $Z$ und liest/schreibt in die erste Zelle des Speicherbandes.
-    \pagebreak
-    \linebreak
+    \linebreak \linebreak
     Jede Turingmaschine kann zu einer Tabelle umgeschrieben, das Beispiel sollte fürs Verständnis ausreichen:
     \includegraphics[width=0.8\textwidth]{turing_table.png} \\
     Die rechte Spalte repräsentiert die mögliche Eingabe ($1$ oder $\square$). Die obere Zeile sind die verschiedenen Zustände ($A,B,C,H$).
