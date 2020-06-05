@@ -162,10 +162,12 @@
         \item Das Speicherband ist in einzelne Zellen eingeteilt (Wie ein Array) das nach links und rechts "unendlich" ist.
         \item Eine leere Zelle wird mit dem Symbol $\square$ markiert.
         \item Der Schreib-Lese-Kopf zeigt immer auf eine Zelle im Speicherband und auf einen Zustand in der Turingmaschine.
+        \item Wie auch bei Automaten gibt es akzeptierende und nicht akzeptierende Zustände.
         \item Die Eingabe ist der Inhalt der Zelle, auf welche der Schreib-Lese-Kopf zeigt, und die Ausgabe wird eben in diese nun geschrieben. Dabei gibt es in der Ausgabe zwei Anweisungen:
         \begin{itemize}
             \item $L$ Der Schreib-Lese-Kopf wird um eins nach links verschoben.
             \item $R$ Der Schreib-Lese-Kopf wird um eins nach rechts verschoben.
+            \item $0$ Der Schreib-Lese-Kopf bleibt einfach in der Zelle.
         \end{itemize}
         \item Eine Turingmaschine muss nicht jedes Szenario abhandeln können. Im Falle eines unbehandelten Falles bleibt die Turingmaschine einfach stehen.
         \item Wenn man zB. nun ein Wort in die Turingmaschine geben möchte, muss man dieses Wort einfach auf das Speicherband schreiben.
