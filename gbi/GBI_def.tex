@@ -132,4 +132,32 @@
         \end{itemize}
     \end{itemize}
 \end{flushleft}
+\large\subparagraph{\large Turing-Mschinen}
+\normalsize
+\begin{flushleft}
+    Eine Turingmaschine ist im Grunde einfach nur ein spezieller Automat. Die Besonderheit der Turingmaschinen ist das "Speicherband", der
+    "Schreib-Lese-Kopf" und die Anweisungen für den Schreib-Lese-Kopf in der Ausgabe.
+    \begin{itemize}
+        \item Das Speicherband ist in einzelne Zellen eingeteilt (Wie ein Array) das nach links und rechts "unendlich" ist.
+        \item Eine leere Zelle wird mit dem Symbol $\square$ markiert.
+        \item Der Schreib-Lese-Kopf zeigt immer auf eine Zelle im Speicherband und auf einen Zustand in der Turingmaschine.
+        \item Die Eingabe ist der Inhalt der Zelle, auf welche der Schreib-Lese-Kopf zeigt, und die Ausgabe wird eben in diese nun geschrieben. Dabei gibt es in der Ausgabe zwei Anweisungen:
+        \begin{itemize}
+            \item $L$ Der Schreib-Lese-Kopf wird um eins nach links verschoben.
+            \item $R$ Der Schreib-Lese-Kopf wird um eins nach rechts verschoben.
+        \end{itemize}
+        \item Eine Turingmaschine muss nicht jedes Szenario abhandeln können. Im Falle eines unbehandelten Falles bleibt die Turingmaschine einfach stehen.
+        \item Wenn man zB. nun ein Wort in die Turingmaschine geben möchte, muss man dieses Wort einfach auf das Speicherband schreiben.
+    \end{itemize}
+    \includegraphics[width=0.8\textwidth]{simple_turing.png} \\
+    Hier sieht man eine simple Turingmaschine mit einem einzigen Zustand $Z$. Die Zellen unter dem Zustand sind das Speicherband mit der Eingabe. Der Pfeil symbolisiert den Schreib-Lese-Kopf.
+    Aktuell befindet sich die Turingmaschine im Zustand $Z$ und liest/schreibt in die erste Zelle des Speicherbandes.
+    \pagebreak
+    \linebreak
+    Jede Turingmaschine kann zu einer Tabelle umgeschrieben, das Beispiel sollte fürs Verständnis ausreichen:
+    \includegraphics[width=0.8\textwidth]{turing_table.png} \\
+    Die rechte Spalte repräsentiert die mögliche Eingabe ($1$ oder $\square$). Die obere Zeile sind die verschiedenen Zustände ($A,B,C,H$).
+    In die Tabelle wird dann Eingetragen was welcher Zustand für welche Eingabe macht. \\
+    zB. für die Eingabe $\square$ in Zustand $A$, schreibt der Schreib-Lese-Kopf eine $1$ in die Zelle des Speicherbandes, das $R$ bewegt den Schreib-Lese-Kopf eins nach rechts und der Zustand wechselt zu Zustand $B$.
+\end{flushleft}
 \end{document}
