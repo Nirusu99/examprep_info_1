@@ -176,6 +176,35 @@
 \large\subparagraph{\large Zweierkomplement und Zahlensysteme}
 \normalsize
 \begin{flushleft}
+    Wir können jedes Zahlensystem einer Basis als Alphabet auffassen: \\
+    zB.: $Z_{10} = \{0,1,2,3,4,5,6,7,8,9\}$ ist das Alphabet für Dezimalzahlen.
+    Wir können diese Ziffern und eine Ziffernfolge (Wort) nun umrechnen in unserer bekanntes Dezimalsystem:
+    \begin{align*}
+        &Num_{10}(x_{k - 1} \cdots x_1x_0) \\
+        =&10^{k-1} \cdot num_{10}(x_{k-1}) + \cdots + 10^1 \cdot num_{10}(x_1) + 10^0 \cdot num_{10}(x_0)
+    \end{align*}
+    Das sieht jetzt deutlich komplizierter aus als es eigentlich ist. Deswegen machen wir einfach ein kleines Beispiel: \\
+    Wir nehmen das Wort (Ziffernfolge) $w = 324 \in Z_{10}^{\ast}$, nun schreiben scheiben wir dieses Wort in unsere Formel: 
+    \begin{align*}
+        Num_{10}(324) &= 10^2 \cdot num_{10}(3) + 10^1 \cdot num_{10}(2) + 10^0 \cdot num_{10}(4) \\
+        &= 10^2 \cdot 3 + 10 \cdot 2 + 1 \cdot 4 = 324
+    \end{align*} 
+    Jetzt fragt man sich warum man das überhaupt so umständlich rechnet? Man kann das doch ablesen? 
+    Natürlich ist uns im bekannten Dezimalsystem die Umrechnung nur einleuchtend und ablesbar. Wir haben das Dezimalsystem über 10 Jahre in der Schule kennen gelernt.
+    Da wir jetzt aber gesehen habe wie es funktioniert können wir auch andere Zahlensysteme ausprobieren: \\
+    zB.: Wir nehmen die Ziffernfolge $w = 1010 \in Z_2^{\ast}$. Die Umrechnung sieht wie folgt aus:
+    \begin{align*}
+        Num_2(1010) &= 2^3 \cdot num_2(1) + 2^2 \cdot num_2(0) + 2^1 \cdot num_2(1) + 2^0 \cdot num_2(0) \\
+        &= 16 \cdot 1 + 8 \cdot 0 + 4 \cdot 1 + 1 \cdot 0 = 20
+    \end{align*}
+    Das kann man jetzt immer weiter führen mit allen möglichen Basen:
+    \begin{itemize}
+        \item $Z_{8} = \{0,1,2,3,4,5,6,7,8\}$
+        \item $Z_{16} = \{0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F\}$
+        Wobei dann hier $num_{16}(A) = 10$, $num_{16}(B) = 11$, \dots und so weiter sind.
+        \item Kurzgesagt ist $Num_{base}(w)$ einfach die Übersetzung der Ziffernfolge $w$ eines Zahlensystems der Basis $base$ in das uns bekannte Dezimalsystem.
+        \item $num(\epsilon)$ ist immer $0$
+    \end{itemize}
     Das Zweierkomplement hat die Besonderheit eines Vorzeichen-Bits (Sign-Bit) was einfach das Vorzeichen der Dezimalzahl ist und ist immer das höchstwertige Bit (Das erste :D).
     Dabei markiert 1 eine negative Dezimalzahl und 0 eine positive Dezimalzahl. \\
     zB. 00011010 ist positiv und 11100110 ist negativ \\
