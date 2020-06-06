@@ -172,6 +172,48 @@
         \end{itemize}
     \end{itemize}
 \end{flushleft}
+\pagebreak
+\large\subparagraph{\large Zweierkomplement und Zahlensysteme}
+\normalsize
+\begin{flushleft}
+    Das Zweierkomplement hat die Besonderheit eines Vorzeichen-Bits (Sign-Bit) was einfach das Vorzeichen der Dezimalzahl ist und ist immer das höchstwertige Bit (Das erste :D).
+    Dabei markiert 1 eine negative Dezimalzahl und 0 eine positive Dezimalzahl. \\
+    zB. 00011010 ist positiv und 11100110 ist negativ \\
+    \vspace{0.5cm}
+    Zur Umrechnung können wir uns einen einfachen Trick merken:
+    \begin{itemize}
+        \item Wenn das Sign-Bit 0 ist rechnen wir einfach nur die Binärzahl aus:
+        \begin{align*}
+            00011010 &= 2^6 \cdot 0 + 2^5 \cdot 0 + 2^4 \cdot 1 + 2^3 \cdot 1 + 2^2 \cdot 0 + 2^1 \cdot 1 + 2^0 \cdot 0 \\
+            &= 16 + 8 + 2 = 26
+        \end{align*}
+        \item Wenn das Sign-Bit 1 ist rechnen wir zunächst die maximal darstellbare Dezimalzahl für diese Binärzahl aus (Alles auf 1 setzen) 
+        und rechnen da nochmal 1 drauf, das ergibt unsere Wertigkeit. 
+        Das kann man sich auch einfach merken (In unserem 8-bit Fall ist die Wertigkeit immer 128). 
+        Dann rechnen wir noch den Dezimalwert unserer Binärzahl aus und ziehst dann die Wertigkeit ab (Da wir ja eine 1 als Sign-Bit haben): \linebreak
+        \linebreak Zunächst berechnen wir die Wertigkeit von 11100110:
+        \begin{align*}
+            1111111 + 1 = 2^7 + 2^6 + 2^5 + 2^4 + 2^3 + 2^2 + 2 + 1 + 1 = 128
+        \end{align*}
+        Dann rechnen wir einfach die Dezimalwert unserer Binärzahl aus:
+        \begin{align*}
+            11100110 &= 64 + 32 + 4 + 2 = 102
+        \end{align*}
+        Und nun ziehen wir einfach die Wertigkeit ab:
+        \begin{align*}
+            102 - 128 = -26
+        \end{align*}
+        Wenn man die Wertigkeiten nicht jedes mal ausrechnen will, 
+        hier eine Tabelle: \linebreak \linebreak
+        \begin{tabular}{|c|c|c|c|c|c|c|c|}
+            \hline
+            Wertigkeit & 256 & 128 & 64 & 32 & 16 & 8 & 4 \\
+            \hline
+            Bitfolge & 9 Bit & 8 Bit & 7 Bit & 6 Bit & 5 Bit  & 4 Bit & 3 Bit \\
+            \hline
+        \end{tabular}
+    \end{itemize}
+\end{flushleft}
 \large\subparagraph{\large Turing-Maschinen}
 \normalsize
 \begin{flushleft}
