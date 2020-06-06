@@ -205,6 +205,21 @@
         \item Kurzgesagt ist $Num_{base}(w)$ einfach die Übersetzung der Ziffernfolge $w$ eines Zahlensystems der Basis $base$ in das uns bekannte Dezimalsystem.
         \item $num(\epsilon)$ ist immer $0$
     \end{itemize}
+    Nun haben wir auch noch die Umkehrfunktion zu $num_k$, nämlich $repr_k$. Dem zu Folge ist für $i\in \mathbb{Z}_k$ $repr_k(i)$ das entsprechende Zeichen.
+    Die Definition für $Repr_k: \mathbb{N}_0 \rightarrow \mathbb{Z}_k$ ist nun folgende:
+    \begin{align*}
+        n \mapsto \begin{cases}
+            repr_k(n) & \text{falls } n < k \\
+            Repr_k(n \textbf{ div } k) \cdot repr_k(n \textbf{ mod } k) & \text{falls } n \geq k
+        \end{cases}
+    \end{align*}
+    Lemma: $Num_k$ ist linksinverse zu $Repr_k$, also
+    \begin{align*}
+        Num_k(Repr_k(n)) = n
+    \end{align*}
+
+    \vspace{1cm}
+    \textbf{Zweierkomplement:} \\
     Das Zweierkomplement hat die Besonderheit eines Vorzeichen-Bits (Sign-Bit) was einfach das Vorzeichen der Dezimalzahl ist und ist immer das höchstwertige Bit (Das erste :D).
     Dabei markiert 1 eine negative Dezimalzahl und 0 eine positive Dezimalzahl. \\
     zB. 00011010 ist positiv und 11100110 ist negativ \\
