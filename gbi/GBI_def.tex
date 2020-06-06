@@ -8,7 +8,7 @@
 
 \begin{document}
 \paragraph{\Large GBI Definitionen}
-\large\subparagraph{\large Formale Sprachen}
+\subparagraph{\large Formale Sprachen}
 \normalsize
 \begin{flushleft}
     Eine formale Sprache $L$ ist eine Menge aus Wörtern. \\
@@ -29,7 +29,7 @@
         \end{align*}
     \end{itemize}
 \end{flushleft}
-\large\subparagraph{\large Mengenlehrer (GBI Niveau :D)}
+\subparagraph{\large Mengenlehrer (GBI Niveau :D)}
 \normalsize
 \begin{flushleft}
     Eine Abbildung $f: X \rightarrow Y$ ist\dots
@@ -48,7 +48,7 @@
     Relationen die sowohl Linkstotal und Rechtseindeutig sind, nennt man auch Abbildungen. Wenn das gegeben ist kann man eigentlich erst $f: X -> Y$ schreiben.
     $Y$ ist dann der Zielbereich/die Zielmenge und $X$ ist der Definitionsbereich/die Ursprungsmenge
 \end{flushleft}
-\large\subparagraph{\large RegEx}
+\subparagraph{\large RegEx}
 \normalsize
 \begin{flushleft}
     Wissenswertes:
@@ -79,7 +79,7 @@
         &= \{a,b\}^\ast
     \end{align*}
 \end{flushleft}
-\large\subparagraph{\large Graphen}
+\subparagraph{\large Graphen}
 \normalsize
 \begin{flushleft}
     \vspace{0.5cm}
@@ -172,8 +172,7 @@
         \end{itemize}
     \end{itemize}
 \end{flushleft}
-\pagebreak
-\large\subparagraph{\large Zweierkomplement und Zahlensysteme}
+\subparagraph{\large Zweierkomplement und Zahlensysteme}
 \normalsize
 \begin{flushleft}
     Wir können jedes Zahlensystem einer Basis als Alphabet auffassen: \\
@@ -258,7 +257,7 @@
         \end{tabular}
     \end{itemize}
 \end{flushleft}
-\large\subparagraph{\large Turing-Maschinen}
+\subparagraph{\large Turing-Maschinen}
 \normalsize
 \begin{flushleft}
     Eine Turingmaschine ist im Grunde einfach nur ein spezieller Automat. Die Besonderheit der Turingmaschinen ist das "Speicherband", der
@@ -286,5 +285,17 @@
     Die rechte Spalte repräsentiert die mögliche Eingabe ($1$ oder $\square$). Die obere Zeile sind die verschiedenen Zustände ($A,B,C,H$).
     In die Tabelle wird dann Eingetragen was welcher Zustand für welche Eingabe macht. \\
     zB. für die Eingabe $\square$ in Zustand $A$, schreibt der Schreib-Lese-Kopf eine $1$ in die Zelle des Speicherbandes, das $R$ bewegt den Schreib-Lese-Kopf eins nach rechts und der Zustand wechselt zu Zustand $B$.
+\end{flushleft}
+\subparagraph{\large Relationen}
+\normalsize
+\begin{flushleft}
+    Eine Relation $\mathbf{R}$ kann folgende Eigenschaften haben:
+\begin{itemize}
+    \item \textbf{Transitivität}, wenn aus $x\mathbf{R}y$ und $y\mathbf{R}z$ auch $x\mathbf{R}z$ folgt.
+    \item \textbf{Reflexivität}, wenn $x\mathbf{R}x$ gilt.
+    \item \textbf{Symmetrie}, wenn $x\mathbf{R}y \Rightarrow y\mathbf{R}x$.
+\end{itemize}
+Hat eine Relation alle der drei oben genannten Eigenschaften, wird diese Relation auch als Äuqivalenzrelation bezeichnet.
+Die bekannteste Äuqivalenzrelation ist wohl "$=$".
 \end{flushleft}
 \end{document}
