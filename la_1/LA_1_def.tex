@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\begin{document}
+\paragraph{\Large LA 1 Definitionen}
+\begin{flushleft}
+    Diese Zusammenfassung setzt Grundwissen voraus:
+    \begin{itemize}
+        \item Abbildungen
+        \item Mengen
+        \item Aussagenlogik
+        \item Rechenaxiome
+    \end{itemize}
+\end{flushleft}
+\vspace{1cm}
+\subparagraph{\large Koerper}
+\normalsize
+\begin{flushleft}
+    Damit eine Menge $K$ mit den zwei Verknuepfungen $+$ und $\cdot$ ein kommutativer Koerper (Wird auch einfach nur Koerper gennant) ist, muessen folgende Aussagen gelten:
+    \begin{itemize}
+        \item Gesetze der Addition
+        \begin{itemize}
+            \item Assoziativitaet: \begin{align*}
+                (x + y) + z = x + (y + z).
+            \end{align*}
+            \item Eindeutiges neutrales Element: \begin{align*}
+                0 + x = x.
+            \end{align*}
+            \item Eindeutiges inverses Element: \begin{align*}
+                x + (-x) = 0.
+            \end{align*}
+            \item Kommutativaet: \begin{align*}
+                x + y = y + x.
+            \end{align*}
+        \end{itemize}
+        \item Gesetze der Multiplikation
+        \begin{itemize}
+            \item Assoziativitaet: \begin{align*}
+                x \cdot (y \cdot y) = (x \cdot y) \cdot z.
+            \end{align*}
+            \item Eindeutiges neutrales Element: \begin{align*}
+                1 \cdot x = x \cdot 1 = x.
+            \end{align*}
+            \item Eindeutiges inverses Element: \begin{align*}
+                x \cdot x^{-1} = 1 = x^{-1} \cdot x.
+            \end{align*}
+            \item Kommutativaet: \begin{align*}
+                x \cdot y = y \cdot x.
+            \end{align*}
+        \end{itemize}
+        \item Distributivgesetz
+        \begin{align*}
+            x \cdot (y + z) = x \cdot y + x \cdot z.
+        \end{align*}
+        \item Gesetze die fuer \textbf{jeden} Koerper gelten:
+        \begin{itemize}
+            \item Multiplikation mit 0: \begin{align*}
+                \forall x \in K: x \cdot 0 = 0
+            \end{align*}
+            \item Nullteilerfreiheit: \begin{align*}
+                x,y \in K, x \not = 0, y \not = 0 \Rightarrow x \cdot y \not = 0.
+            \end{align*}
+        \end{itemize}
+    \end{itemize}
+    Ausserdem muessen die beiden Verknuepfungen $+$ und $\cdot$ Verknuepfungen auf $K$ sein. Also eine binaere Abbildung $K \times K \rightarrow K$.
+    Entscheiden ist dabei, dass das Bild wieder ein Element von $K$ seien muss; diese Forderung bezeichnet man auch als \textbf{Abgeschlossenheit}.
+\end{flushleft}
+\end{document}
