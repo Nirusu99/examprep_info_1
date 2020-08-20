@@ -11,11 +11,43 @@
 \begin{flushleft}
     Diese Zusammenfassung setzt Grundwissen voraus:
     \begin{itemize}
+        \item Relationen
         \item Abbildungen
         \item Mengen
         \item Aussagenlogik
         \item Rechenaxiome
     \end{itemize}
+\end{flushleft}
+\vspace{0.5cm}
+\subparagraph{\large Aequivalenzrelationen}
+\normalsize
+\begin{flushleft}
+    Eine Aequivalenzrelation ist eine Relation $\sim$ auf die Menge $M$ mit folgenden Eigenschaften:
+    \begin{itemize}
+        \item \textbf{Reflexiv}: $\forall x \in M: x \sim x$.
+        \item \textbf{Symmetrie}: $\forall x,y \in M: x \sim y \Rightarrow y \sim x$.
+        \item \textbf{Transitiv}: $\forall x,y,z \in M: x \sim \Rightarrow x \sim z$.
+    \end{itemize}
+    Ein Beispiel fuer eine Aequivalenzrelation ist $=$ auf die Menge $\mathbb{Z}$.
+    \vspace{1cm}
+    Es sei $\sim$ eine Aequivalenzrelation auf die Menge $M$. Dann heisst fuer $x \in M$ die Teilmenge
+    \begin{align*}
+        [x]_{\sim} := \{y \in M | x \sim y\} \subseteq M
+    \end{align*}
+    die \textbf{Aequivalenzklasse} von $x$ (bezueglich $\sim$).
+\end{flushleft}
+\vspace{1cm}
+\subparagraph{\large Gruppen}
+\normalsize
+\begin{flushleft}
+    Es sei $M$ eine Menge und $+$ eine Verknuepfungen auf $M$. Dann heisst das Paar $(M,+)$ eine $Gruppe$, wenn folgende Bedingungen gelten:
+    \begin{itemize}
+        \item Assoziativ: $\forall x,y,z \in M: (x + y) + z = x + (y + z)$.
+        \item neutrales Element: $\exists e \in M; \forall x \in M: x + e = e + x = x$.
+        \item inverses Element: $\forall x \in M; \exists y \in M: x + y = y + x = e$.
+    \end{itemize}
+    Eine besondere und wichtig Art der Gruppen sind die abelsche Gruppen (kommutative Gruppen).
+    Damit eine Gruppe abelsch ist, muss die Verknuepfungen $+$ kommutativ sein.
 \end{flushleft}
 \vspace{1cm}
 \subparagraph{\large Koerper}
@@ -75,7 +107,7 @@
         \item \textbf{Skalarmultiplikation}
         \begin{itemize}
             \item (S1) Assoziativitaet $\forall \lambda , \mu \in \mathbb{K}; \forall v \in V: \lambda(\mu v) = (\lambda \mu)(v).$
-            \item (S2) Wirkung des neutralen Elements $\forall v \ in V: 1 \cdot v = v.$
+            \item (S2) Wirkung des neutralen Elements $\forall v \in V: 1 \cdot v = v.$
         \end{itemize}
         \item \textbf{Vektoraddition und Skalarmultiplikation}
         \begin{itemize}
