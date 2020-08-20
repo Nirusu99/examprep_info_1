@@ -23,7 +23,7 @@
 \begin{flushleft}
     Damit eine Menge $K$ mit den zwei Verknuepfungen $+$ und $\cdot$ ein kommutativer Koerper (Wird auch einfach nur Koerper gennant) ist, muessen folgende Aussagen gelten:
     \begin{itemize}
-        \item Gesetze der Addition
+        \item \textbf{Gesetze der Addition}
         \begin{itemize}
             \item Assoziativitaet: \begin{align*}
                 (x + y) + z = x + (y + z).
@@ -38,7 +38,7 @@
                 x + y = y + x.
             \end{align*}
         \end{itemize}
-        \item Gesetze der Multiplikation
+        \item \textbf{Gesetze der Multiplikation}
         \begin{itemize}
             \item Assoziativitaet: \begin{align*}
                 x \cdot (y \cdot y) = (x \cdot y) \cdot z.
@@ -53,7 +53,7 @@
                 x \cdot y = y \cdot x.
             \end{align*}
         \end{itemize}
-        \item Distributivgesetz
+        \item \textbf{Distributivgesetz}
         \begin{align*}
             x \cdot (y + z) = x \cdot y + x \cdot z.
         \end{align*}
@@ -69,5 +69,35 @@
     \end{itemize}
     Ausserdem muessen die beiden Verknuepfungen $+$ und $\cdot$ Verknuepfungen auf $K$ sein. Also eine binaere Abbildung $K \times K \rightarrow K$.
     Entscheiden ist dabei, dass das Bild wieder ein Element von $K$ seien muss; diese Forderung bezeichnet man auch als \textbf{Abgeschlossenheit}.
+\end{flushleft}
+\vspace{1cm}
+\subparagraph{\large Abstrakte Vektorraeume}
+\normalsize
+\begin{flushleft}
+    Ein Vektorraum wird immer ueber einen Koerper definiert! (Koerper sind zB. $\mathbb{Q}$, $\mathbb{R}$ und $\mathbb{C}$).
+    Ein Vektorraum $V$ ueber Koerper $\mathbb{K}$ hat folgende Eigenschaften:
+    \begin{itemize}
+        \item \textbf{Vektroaddition}:
+        \begin{itemize}
+            \item (V1) Assoziativitaet $\forall u,v,w \in V: (u + v) + w = u + (v + w).$
+            \item (V2) Eindeutiges neutrales Element $\exists ! o \in V; \forall v \in V: o + v = v + o = v.$
+            \item (V3) Existenz eines inversen Elements $\forall v \in V; \exists !(-v)\in V: v + (-v) = (-v) + v = o.$
+            \item (V4) Kommutativaet $\forall v,w \in V: v + w = w + v.$
+        \end{itemize}
+        \item \textbf{Skalarmultiplikation}
+        \begin{itemize}
+            \item (S1) Assoziativitaet $\forall \lambda , \mu \in \mathbb{K}; \forall v \in V: \lambda(\mu v) = (\lambda \mu)(v).$
+            \item (S2) Wirkung des neutralen Elements $\forall v \ in V: 1 \cdot v = v.$
+        \end{itemize}
+        \item \textbf{Vektoraddition und Skalarmultiplikation}
+        \begin{itemize}
+            \item (D1) 1. Distributivgesetz $\forall \lambda \in \mathbb{K}; \forall v,w \in V: \lambda(v + w) = (\lambda v) + (\lambda w).$
+            \item (D2) 2. Distributivgesetz $\forall \lambda , \mu \in \mathbb{K}; \forall v \in V: (\lambda + \mu)v = (\lambda v) + (\mu v).$
+        \end{itemize}
+    \end{itemize}
+    Wenn nun $\mathbb{K} := \mathbb{R}$ und $V$ eine Menge sind. Und \begin{align}
+        +: V \times V \rightarrow V, \quad (x,y) \mapsto x + y \quad \text{und} \quad \cdot: \mathbb{K} \times V \to V, \quad (\lambda,x) \mapsto \lambda x
+    \end{align}
+    zwei Abbildungen sind, die den Eigenschaften (V1-4) (S1) (S2) und (D1) (D2) genuegen, so heisst das Triple $(V,+,\cdot)$ ein $\mathbb{R}$-Vektorraum.
 \end{flushleft}
 \end{document}
