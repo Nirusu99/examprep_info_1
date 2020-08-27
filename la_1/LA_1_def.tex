@@ -19,68 +19,68 @@
     \end{itemize}
 \end{flushleft}
 \vspace{0.5cm}
-\subparagraph{\large Aequivalenzrelationen}
+\subparagraph{\large Äquivalenzrelationen}
 \normalsize
 \begin{flushleft}
-    Eine Aequivalenzrelation ist eine Relation $\sim$ auf die Menge $M$ mit folgenden Eigenschaften:
+    Eine Äquivalenzrelation ist eine Relation $\sim$ auf die Menge $M$ mit folgenden Eigenschaften:
     \begin{itemize}
         \item \textbf{Reflexiv}: $\forall x \in M: x \sim x$.
         \item \textbf{Symmetrie}: $\forall x,y \in M: x \sim y \Rightarrow y \sim x$.
         \item \textbf{Transitiv}: $\forall x,y,z \in M: x \sim y \land y \sim z \Rightarrow x \sim z$.
     \end{itemize}
-    Ein Beispiel fuer eine Aequivalenzrelation ist $=$ auf die Menge $\mathbb{Z}$.
+    Ein Beispiel für eine Äquivalenzrelation ist $=$ auf die Menge $\mathbb{Z}$.
     \vspace{1cm}
     \linebreak
-    Es sei nun $\sim$ eine Aequivalenzrelation auf die Menge $M$. Dann heisst fuer $x \in M$ die Teilmenge
+    Es sei nun $\sim$ eine Äquivalenzrelation auf die Menge $M$. Dann heisst für $x \in M$ die Teilmenge
     \begin{align*}
         [x]_{\sim} := \{y \in M | x \sim y\} \subseteq M
     \end{align*}
-    die \textbf{Aequivalenzklasse} von $x$ (bezueglich $\sim$).
+    die \textbf{Äquivalenzklasse} von $x$ (bezüglich $\sim$).
 \end{flushleft}
 \vspace{1cm}
 \subparagraph{\large Gruppen}
 \normalsize
 \begin{flushleft}
-    Es sei $M$ eine Menge und $+$ eine Verknuepfungen auf $M$. Dann heisst das Paar $(M,+)$ eine $Gruppe$, wenn folgende Bedingungen gelten:
+    Es sei $M$ eine Menge und $+$ eine Verknüpfungen auf $M$. Dann heisst das Paar $(M,+)$ eine $Gruppe$, wenn folgende Bedingungen gelten:
     \begin{itemize}
         \item Assoziativ: $\forall x,y,z \in M: (x + y) + z = x + (y + z)$.
-        \item neutrales Element: $\exists e \in M; \forall x \in M: x + e = e + x = x$.
-        \item inverses Element: $\forall x \in M; \exists y \in M: x + y = y + x = e$.
+        \item neutrales Element: $\exists e \in M\quad \forall x \in M: x + e = e + x = x$.
+        \item inverses Element: $\forall x \in M\quad \exists y \in M: x + y = y + x = e$.
     \end{itemize}
     Eine besondere und wichtig Art der Gruppen sind die abelsche Gruppen (kommutative Gruppen).
-    Damit eine Gruppe abelsch ist, muss die Verknuepfungen $+$ kommutativ sein.
+    Damit eine Gruppe abelsch ist, muss die Verknüpfungen $+$ kommutativ sein.
 \end{flushleft}
 \vspace{1cm}
-\subparagraph{\large Koerper}
+\subparagraph{\large Körper}
 \normalsize
 \begin{flushleft}
-    Damit eine Menge $K$ mit den zwei Verknuepfungen $+$ und $\cdot$ ein kommutativer Koerper (Wird auch einfach nur Koerper gennant) ist, muessen folgende Aussagen gelten:
+    Damit eine Menge $K$ mit den zwei Verknüpfungen $+$ und $\cdot$ ein kommutativer Körper (Wird auch einfach nur Körper gennant) ist, müssen folgende Aussagen gelten:
     \begin{itemize}
         \item \textbf{Gesetze der Addition}
         \begin{itemize}
-            \item Assoziativitaet:
+            \item Assoziativität:
                 $(x + y) + z = x + (y + z).$
             \item Eindeutiges neutrales Element:
                 $0 + x = x.$
             \item Eindeutiges inverses Element: 
                 $x + (-x) = 0.$
-            \item Kommutativitaet:
+            \item Kommutativität:
                 $x + y = y + x.$
         \end{itemize}
         \item \textbf{Gesetze der Multiplikation}
         \begin{itemize}
-            \item Assoziativitaet:
+            \item Assoziativität:
                 $x \cdot (y \cdot y) = (x \cdot y) \cdot z.$
             \item Eindeutiges neutrales Element:
                 $1 \cdot x = x \cdot 1 = x.$
             \item Eindeutiges inverses Element:
                 $x \cdot x^{-1} = 1 = x^{-1} \cdot x.$
-            \item Kommutativitaet:
+            \item Kommutativität:
                 $x \cdot y = y \cdot x.$
         \end{itemize}
         \item \textbf{Distributivgesetz}
             $x \cdot (y + z) = x \cdot y + x \cdot z.$
-        \item Gesetze die fuer \textbf{jeden} Koerper gelten:
+        \item Gesetze die für \textbf{jeden} Körper gelten:
         \begin{itemize}
             \item Multiplikation mit 0:
                 $\forall x \in K: x \cdot 0 = 0$
@@ -88,37 +88,37 @@
                 $x,y \in K, x \not = 0, y \not = 0 \Rightarrow x \cdot y \not = 0.$
         \end{itemize}
     \end{itemize}
-    Ausserdem muessen die beiden Verknuepfungen $+$ und $\cdot$ Verknuepfungen auf $K$ sein. Also eine binaere Abbildung $K \times K \rightarrow K$.
-    Entscheiden ist dabei, dass das Bild wieder ein Element von $K$ seien muss; diese Forderung bezeichnet man auch als \textbf{Abgeschlossenheit}.
+    Ausserdem müssen die beiden Verknüpfungen $+$ und $\cdot$ Verknüpfungen auf $K$ sein. Also eine binäre Abbildung $K \times K \rightarrow K$.
+    Entscheiden ist dabei, dass das Bild wieder ein Element von $K$ seien muss\quad diese Forderung bezeichnet man auch als \textbf{Abgeschlossenheit}.
 \end{flushleft}
 \vspace{1cm}
-\subparagraph{\large Abstrakte Vektorraeume}
+\subparagraph{\large Abstrakte Vektorräume}
 \normalsize
 \begin{flushleft}
-    Ein Vektorraum wird immer ueber einen Koerper definiert! (Koerper sind zB. $\mathbb{Q}$, $\mathbb{R}$ und $\mathbb{C}$).
-    Ein Vektorraum $V$ ueber Koerper $\mathbb{K}$ hat folgende Eigenschaften:
+    Ein Vektorraum wird immer über einen Körper definiert! (Körper sind zB. $\mathbb{Q}$, $\mathbb{R}$ und $\mathbb{C}$).
+    Ein Vektorraum $V$ über Körper $\mathbb{K}$ hat folgende Eigenschaften:
     \begin{itemize}
         \item \textbf{Vektoraddition}:
         \begin{itemize}
-            \item (V1) Assoziativitaet $\forall u,v,w \in V: (u + v) + w = u + (v + w).$
-            \item (V2) Eindeutiges neutrales Element $\exists ! o \in V; \forall v \in V: o + v = v + o = v.$
-            \item (V3) Existenz eines inversen Elements $\forall v \in V; \exists !(-v)\in V: v + (-v) = (-v) + v = o.$
-            \item (V4) Kommutativitaet $\forall v,w \in V: v + w = w + v.$
+            \item (V1) Assoziativität $\forall u,v,w \in V: (u + v) + w = u + (v + w).$
+            \item (V2) Eindeutiges neutrales Element $\exists ! o \in V\quad \forall v \in V: o + v = v + o = v.$
+            \item (V3) Existenz eines inversen Elements $\forall v \in V\quad \exists !(-v)\in V: v + (-v) = (-v) + v = o.$
+            \item (V4) Kommutativität $\forall v,w \in V: v + w = w + v.$
         \end{itemize}
         \item \textbf{Skalarmultiplikation}
         \begin{itemize}
-            \item (S1) Assoziativitaet $\forall \lambda , \mu \in \mathbb{K}; \forall v \in V: \lambda(\mu v) = (\lambda \mu)(v).$
+            \item (S1) Assoziativität $\forall \lambda , \mu \in \mathbb{K}\quad \forall v \in V: \lambda(\mu v) = (\lambda \mu)(v).$
             \item (S2) Wirkung des neutralen Elements $\forall v \in V: 1 \cdot v = v.$
         \end{itemize}
         \item \textbf{Vektoraddition und Skalarmultiplikation}
         \begin{itemize}
-            \item (D1) 1. Distributivgesetz $\forall \lambda \in \mathbb{K}; \forall v,w \in V: \lambda(v + w) = (\lambda v) + (\lambda w).$
-            \item (D2) 2. Distributivgesetz $\forall \lambda , \mu \in \mathbb{K}; \forall v \in V: (\lambda + \mu)v = (\lambda v) + (\mu v).$
+            \item (D1) 1. Distributivgesetz $\forall \lambda \in \mathbb{K}\quad \forall v,w \in V: \lambda(v + w) = (\lambda v) + (\lambda w).$
+            \item (D2) 2. Distributivgesetz $\forall \lambda , \mu \in \mathbb{K}\quad \forall v \in V: (\lambda + \mu)v = (\lambda v) + (\mu v).$
         \end{itemize}
     \end{itemize}
-    Sei $\mathbb{K}$ ein Koerper und $V$ eine Menge. Sind \begin{align}
+    Sei $\mathbb{K}$ ein Körper und $V$ eine Menge. Sind \begin{align}
         +: V \times V \rightarrow V, \quad (x,y) \mapsto x + y \quad \text{und} \quad \cdot: \mathbb{K} \times V \to V, \quad (\lambda,x) \mapsto \lambda x
     \end{align}
-    zwei Abbildungen, die den Eigenschaften (V1-4) (S1) (S2) und (D1) (D2) genuegen, so heisst das Triple $(V,+,\cdot)$ ein $\mathbb{K}$-Vektorraum.
+    zwei Abbildungen, die den Eigenschaften (V1-4) (S1) (S2) und (D1) (D2) genügen, so heisst das Triple $(V,+,\cdot)$ ein $\mathbb{K}$-Vektorraum.
 \end{flushleft}
 \end{document}
