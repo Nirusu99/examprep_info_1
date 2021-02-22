@@ -45,7 +45,7 @@
         \item \textbf{Linkstotal}, wenn es für jedes Element in der Ursprungsmenge $X$ mindestens ein Zielbild in der Zielmenge $Y$ gibt. \\
         \includegraphics[width=0.2\textwidth]{linkstotal.png}
     \end{itemize}
-    Relationen die sowohl Linkstotal und Rechtseindeutig sind, nennt man auch Abbildungen. Wenn das gegeben ist kann man eigentlich erst $f: X -> Y$ schreiben.
+    Relationen die sowohl Linkstotal und Rechtseindeutig sind, nennt man auch Abbildungen. Wenn das gegeben ist kann man eigentlich erst $f: X \rightarrow Y$ schreiben.
     $Y$ ist dann der Zielbereich/die Zielmenge und $X$ ist der Definitionsbereich/die Ursprungsmenge
 \end{flushleft}
 \subparagraph{\large RegEx}
@@ -55,7 +55,7 @@
     \begin{itemize}
         \item Hilfssymbole $:=$\textcolor{red}{$\{|,(,),\ast,\emptyset\}$}
         \item "$\ast$ vor $\cdot$ (Konkatenation)"
-        \item "$\cdot$ vor Strich "|" (Oder)
+        \item "$\cdot$ vor Strich "$|$" (Oder)
         \item $\langle R \rangle$ ist die formale Sprache, welche mit $R$ gebildet werden kann
         \item $\langle \emptyset \rangle = \{\}$
         \item $\langle R_1| R_2 \rangle = \langle R_1 \rangle \cup \langle R_2 \rangle$
@@ -109,7 +109,7 @@
         \item \textcolor{red}{azyklischer Graph}: kein Teilgraph ist zyklisch
         \item Ein Graph ist \textcolor{red}{streng zusammenhängend} wenn
         \begin{itemize}
-            \item zwischen jeden beliebigen zwei Knoten (Knotenpaar) aus dem Graphen ein Pfad existiert. Also jeder Punkt von jedem anderen Punkt (sich eingeschlossen) erreichbar ist. 
+            \item zwischen jeden beliebigen zwei Knoten (Knotenpaar) aus dem Graphen ein Pfad existiert. Also jeder Punkt von jedem anderen Punkt (sich eingeschlossen) erreichbar ist.
         \end{itemize}
         \item Ein Graph ist ein \textcolor{red}{gerichteter Baum} wenn:
         \begin{itemize}
@@ -183,12 +183,12 @@
         =&10^{k-1} \cdot num_{10}(x_{k-1}) + \cdots + 10^1 \cdot num_{10}(x_1) + 10^0 \cdot num_{10}(x_0)
     \end{align*}
     Das sieht jetzt deutlich komplizierter aus als es eigentlich ist. Deswegen machen wir einfach ein kleines Beispiel: \\
-    Wir nehmen das Wort (Ziffernfolge) $w = 324 \in Z_{10}^{\ast}$, nun schreiben scheiben wir dieses Wort in unsere Formel: 
+    Wir nehmen das Wort (Ziffernfolge) $w = 324 \in Z_{10}^{\ast}$, nun schreiben scheiben wir dieses Wort in unsere Formel:
     \begin{align*}
         Num_{10}(324) &= 10^2 \cdot num_{10}(3) + 10^1 \cdot num_{10}(2) + 10^0 \cdot num_{10}(4) \\
         &= 10^2 \cdot 3 + 10 \cdot 2 + 1 \cdot 4 = 324
-    \end{align*} 
-    Jetzt fragt man sich warum man das überhaupt so umständlich rechnet? Man kann das doch ablesen? 
+    \end{align*}
+    Jetzt fragt man sich warum man das überhaupt so umständlich rechnet? Man kann das doch ablesen?
     Natürlich ist uns im bekannten Dezimalsystem die Umrechnung nur einleuchtend und ablesbar. Wir haben das Dezimalsystem über 10 Jahre in der Schule kennen gelernt.
     Da wir jetzt aber gesehen habe wie es funktioniert können wir auch andere Zahlensysteme ausprobieren: \\
     zB.: Wir nehmen die Ziffernfolge $w = 1010 \in Z_2^{\ast}$. Die Umrechnung sieht wie folgt aus:
@@ -230,9 +230,9 @@
             00011010 &= 2^6 \cdot 0 + 2^5 \cdot 0 + 2^4 \cdot 1 + 2^3 \cdot 1 + 2^2 \cdot 0 + 2^1 \cdot 1 + 2^0 \cdot 0 \\
             &= 16 + 8 + 2 = 26
         \end{align*}
-        \item Wenn das Sign-Bit 1 ist rechnen wir zunächst die maximal darstellbare Dezimalzahl für diese Binärzahl aus (Alles auf 1 setzen) 
-        und rechnen da nochmal 1 drauf, das ergibt unsere Wertigkeit. 
-        Das kann man sich auch einfach merken (In unserem 8-bit Fall ist die Wertigkeit immer 128). 
+        \item Wenn das Sign-Bit 1 ist rechnen wir zunächst die maximal darstellbare Dezimalzahl für diese Binärzahl aus (Alles auf 1 setzen)
+        und rechnen da nochmal 1 drauf, das ergibt unsere Wertigkeit.
+        Das kann man sich auch einfach merken (In unserem 8-bit Fall ist die Wertigkeit immer 128).
         Dann rechnen wir noch den Dezimalwert unserer Binärzahl aus und ziehst dann die Wertigkeit ab (Da wir ja eine 1 als Sign-Bit haben): \linebreak
         \linebreak Zunächst berechnen wir die Wertigkeit von 11100110:
         \begin{align*}
@@ -246,7 +246,7 @@
         \begin{align*}
             102 - 128 = -26
         \end{align*}
-        Wenn man die Wertigkeiten nicht jedes mal ausrechnen will, 
+        Wenn man die Wertigkeiten nicht jedes mal ausrechnen will,
         hier eine Tabelle: \linebreak \linebreak
         \begin{tabular}{|c|c|c|c|c|c|c|c|}
             \hline
